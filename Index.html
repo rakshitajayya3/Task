@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Page</title>
+
+<style>
+body{
+    background-color: lightblue;
+}
+
+fieldset{
+    background-color: white;
+    width: 300px;
+    padding: 20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<form action="details.html" onsubmit="saveData()">
+<fieldset>
+<legend>Login Page</legend>
+
+Name: <input type="text" id="name"><br><br>
+Email: <input type="email" id="email"><br><br>
+Password: <input type="password" id="password"><br><br>
+Branch: <input type="text" id="branch"><br><br>
+Year: <input type="number" id="year"><br><br>
+
+<input type="submit" value="Submit">
+</fieldset>
+</form>
+
+<script>
+function saveData(){
+    localStorage.setItem("name", document.getElementById("name").value);
+    localStorage.setItem("email", document.getElementById("email").value);
+    localStorage.setItem("password", document.getElementById("password").value);
+    localStorage.setItem("branch", document.getElementById("branch").value);
+    localStorage.setItem("year", document.getElementById("year").value);
+}
+</script>
+
+</body>
+</html>
